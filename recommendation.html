@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+    <style>
+        
+        body {
+        font-size :18px;
+
+        background-image: linear-gradient(red, yellow);
+
+
+
+        }
+        h1  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #040404;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+        button  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #060606;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+        input  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #010101;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+    </style>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Choose your desired option</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <!-- <form action="recommend" method="post">
+      <input type="text" name="Label" placeholder="Enter the Label" list="example" required="required" /> -->
+      <form action="#" method="post">
+        <input type="text" name="nm" placeholder="Enter the Label" list="example" required="required" />
+      <datalist id="example">
+      <option value="Moisturizer">
+      <option value="Treatment">  
+      <option value="Eye cream">  
+      <option value="Cleanser">  
+      <option value="Sun protect">  
+      <option value="Face Mask">
+      </datalist>
+     <br>
+      
+
+
+
+          <button type="submit" class="btn btn-primary btn-block btn-large">Recommend</button>
+
+
+    </form>
+
+
+   <br>
+
+ </div>
+
+
+</body>
+</html>

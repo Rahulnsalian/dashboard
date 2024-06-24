@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1><b>Product Safety Check</b></h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict1')}}"method="post">
+      <input type="text" name="Label" placeholder="Enter the Label" list="example" required="required" />
+      <datalist id="example">
+      <option value="Moisturizer">
+      <option value="Treatment">  
+      <option value="Eye cream">  
+      <option value="Cleanser">  
+      <option value="Sun protect">  
+      <option value="Face Mask">
+      </datalist>
+      <input type="text" name="Brand" placeholder="Enter the Brand" list="brand" required="required" />
+		  <input type="text" name="Name" placeholder="Enter the Product Name" required="required" />
+      <input type="number" name="Price" placeholder="Enter the Price " required="required" />
+      <input type="text" name="Combination" placeholder="Enter your skin type" list="examples" required="required" />
+      <datalist id="examples">
+        <option value="Dry">
+        <option value="Normal">  
+        <option value="Oily">
+        <option value="Combination"> 
+        <option value="Sensitive"> 
+        </option>  
+        </datalist>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+
+
+   <br>
+
+ </div>
+
+
+</body>
+</html>

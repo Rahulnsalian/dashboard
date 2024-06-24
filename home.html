@@ -1,0 +1,109 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+        background:#FFC0CB;
+        }
+
+        input.blue  {
+        text-align:right;
+        /*vertical-align:middle;*/
+        margin:0 ;
+        position: absolute;
+        top: 10%;
+        left: 75%;
+        transform: translateX(-40%)translateY(-50%);
+        justify-content: center;
+        color:  #0d0c0c;
+        font-family : sans-serif ;
+        font-size :25px;
+
+        }
+        input.green {
+        text-align:right;
+
+        margin:0 ;
+        position: absolute;
+        top: 10%;
+        left: 90%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #0f0d0d;
+        font-family : sans-serif ;
+        font-size :25px;
+
+        }
+        img {
+            position: absolute;
+            width: 550px;
+            height: 500px;
+            left: 700px;
+            right: 0px;
+            top: 100px;
+        }
+        div.a {
+            text-align: left;
+            font-family: inherit;
+            font-size: 20px;
+
+        }
+        div.b{
+
+            text-align: left;
+            font-size: medium;
+            font-family: inherit;
+        }
+        .button {
+            background-color: #E45480;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+
+        }
+
+
+
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cosmetic Safety Evaluator and Recommendation system</h2>
+    <img src="../static/Image/f1.jpg">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="a">
+        <h1>Beauty</h1>
+    </div>
+    <div class="b">
+        <p>What are you waiting for? Products Specially made to Suit your Skin Are Just One Click Away!</p>
+    </div>
+
+    <form action="/submit" method="post">
+        <input type="submit" class="button"class="blue" name="pred" value="Recommend">
+
+        <input type="submit" class="button"class="green" name="reco" value="Brands">
+
+        <input type="submit" class="button" class="yellow" name="skin" value="Skin type">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        
+        body {
+        font-size :18px;
+        background-color : rgb(232, 190, 192) ;
+        background-image : url(3.png) ;
+        }
+        h1  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  black;
+        font-family : verdana ;
+        font-size :50px;
+        font-wieght : bolder;
+        }
+        
+        body{
+            background-image: url('../static/Image/3.jpg');
+            background-size: cover; /* or contain, depending on your preference */
+            background-repeat:no-repeat;
+        
+        }
+        .double-shaded {
+            text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 60px;
+            color: black; /* Main color of the text */
+            text-shadow: 1px 1px 0 #00f, -1px -1px 0 #0f0; /* Double shadow effect */
+            font-wieght : bolder;
+          }
+        
+    </style>
+<head>
+    <title>Predicted answer</title>
+</head>
+<body>
+    <b><div class="double-shaded">Your cosmetic product is {{ prediction_text }}</div><b>
+</body>
+</html>

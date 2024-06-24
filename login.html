@@ -1,0 +1,49 @@
+<style>
+        input.red  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #0d0c0c;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+        input.pink  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #0d0c0c;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+</style>
+{%extends "base.html"%}
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+<form action="#" method="post">
+    <!-- <p>Name:</p> -->
+    <p><input type="Enter the label" class="red" placeholder="Enter the Label" list="example" name="nm" id=""</p>
+    <datalist id="example">
+        <option value="Moisturizer">
+        <option value="Treatment">  
+        <option value="Eye cream">  
+        <option value="Cleanser">  
+        <option value="Sun protect">  
+        <option value="Face Mask">
+        </datalist>
+       <br>
+    <p><input type="submit" class="pink" name="submit" id=""</p>
+</form>
+{% endblock %}

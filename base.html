@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+        background-image: linear-gradient(pink, purple);
+        background-color : rgb(179, 190, 176) ;
+
+        }
+        h1  {
+        text-align:center;
+        vertical-align:middle;
+        margin:0 ;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+        justify-content: center;
+        color:  #040404;
+        font-family : verdana ;
+        font-size :40px;
+        font-wieght : bolder;
+        }
+    </style>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>List of Brands</h1>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

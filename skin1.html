@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Type Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: #0066cc;
+            text-align: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        div {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056aa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skin Type Detection</h1>
+    <form action="{{ url_for('skin_t')}}" method="POST">
+
+        
+        <div>
+            <label for="texture">Texture of your skin:</label>
+            <input type="radio" id="texture1" name="texture" value="1">Does not Shine<br>
+            <input type="radio" id="texture2" name="texture" value="2">Is dry and sometimes slight flaking may appear<br>
+            <input type="radio" id="texture3" name="texture" value="3">Shines on the nose<br>
+            <input type="radio" id="texture4" name="texture" value="4">Shines all-over<br><br>
+        </div>
+
+        <div>
+            <label for="pores">Appearance of pores on your skin:</label>
+            <input type="radio" id="pores1" name="pores" value="1">Normal<br>
+            <input type="radio" id="pores2" name="pores" value="2">Very fine<br>
+            <input type="radio" id="pores3" name="pores" value="3">Visible<br>
+            <input type="radio" id="pores4" name="pores" value="4">Very opened<br><br>
+        </div>
+
+        <div>
+            <label for="appearance">How does your skin look like?</label>
+            <input type="radio" id="appearance1" name="appearance" value="1">Cool, fresh, and supple<br>
+            <input type="radio" id="appearance2" name="appearance" value="2">Thin and lacking moisture<br>
+            <input type="radio" id="appearance3" name="appearance" value="3">Shines on the 'T' zone<br>
+            <input type="radio" id="appearance4" name="appearance" value="4">Shines and has a tendency for acne<br><br>
+        </div>
+
+        <div>
+            <label for="feel">How does your skin feel when touched?</label>
+            <input type="radio" id="feel1" name="feel" value="1">Supple<br>
+            <input type="radio" id="feel2" name="feel" value="2">Dry or very dry<br>
+            <input type="radio" id="feel3" name="feel" value="3">Oily on the forehead and nose<br>
+            <input type="radio" id="feel4" name="feel" value="4">Oily all over<br><br>
+        </div>
+
+        <div>
+            <label for="tightness">How often do you feel tightness around the eyes and mouth area?</label>
+            <input type="radio" id="tightness1" name="tightness" value="1">Very often<br>
+            <input type="radio" id="tightness2" name="tightness" value="2">Regularly<br>
+            <input type="radio" id="tightness3" name="tightness" value="3">Sometimes<br>
+            <input type="radio" id="tightness4" name="tightness" value="4">Never<br><br>
+        </div>
+
+        <div>
+            <label for="pimples">How often do you have pimples?</label>
+            <input type="radio" id="pimples1" name="pimples" value="1">Very seldom<br>
+            <input type="radio" id="pimples2" name="pimples" value="2">Never<br>
+            <input type="radio" id="pimples3" name="pimples" value="3">Sometimes<br>
+            <input type="radio" id="pimples4" name="pimples" value="4">Very often<br><br>
+        </div>
+
+        <div>
+            <label for="wrinkles">Do you have facial lines and wrinkles?</label>
+            <input type="radio" id="wrinkles1" name="wrinkles" value="1">Very few<br>
+            <input type="radio" id="wrinkles2" name="wrinkles" value="2">Very deep<br>
+            <input type="radio" id="wrinkles3" name="wrinkles" value="3">Expression lines only<br>
+            <input type="radio" id="wrinkles4" name="wrinkles" value="4">None<br><br>
+        </div>
+
+        <div>
+            <label for="sun_exposure">What happens when your skin is exposed to sun?</label>
+            <input type="radio" id="sun_exposure1" name="sun_exposure" value="1">Reddens<br>
+            <input type="radio" id="sun_exposure2" name="sun_exposure" value="2">Burns<br>
+            <input type="radio" id="sun_exposure3" name="sun_exposure" value="3">Tans<br>
+            <input type="radio" id="sun_exposure4" name="sun_exposure" value="4">Tans very well<br><br>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Detect</button>
+    </form>
+</body>
+</html>
